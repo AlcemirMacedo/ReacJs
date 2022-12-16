@@ -1,3 +1,39 @@
+//TRABALHANDO COM LISTAS
+import React, {Component} from "react";
+
+
+class App extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      feed: [
+        {id: 1, nomeusuario: "Alcemir", idade: 40},
+        {id: 2, nomeusuario: "Maria", idade: 7},
+        {id: 3, nomeusuario: "Samuel", idade: 10}
+      ]
+    }
+  }
+  
+  render(){
+    return(
+      <div>
+        {this.state.feed.map((lista)=>{
+          return(
+            <div><h3>{lista.nomeusuario}</h3></div>
+          )
+        })}
+      </div>
+    )
+  }
+}
+export default App;
+
+// FIM TRABALHANDO COM LISTAS
+
+
+/*
+
 import React, {Component} from "react";
 import Membro from "./componentes/Membro";
 
@@ -12,7 +48,7 @@ class App extends Component{
     )
   }
 }
-export default App;
+export default App;*/
 
 
 
